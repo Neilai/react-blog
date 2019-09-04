@@ -1,16 +1,35 @@
 import React, {
-  Component
+  Component,
+  Fragment,
 } from 'react'
+import './index.module.scss'
+import HomeHeader from '@/components/HomeHeader'
+import Sidebar from '@/components/Sidebar'
+import {
+  Switch,
+  Route
+} from 'react-router-dom';
+import List from './list'
+import Me from './me'
 
 
-class Login extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
+    console.log(this.props)
+
   }
   render() {
     return (
-      <div className="fuck">home</div>
+      <Fragment>
+        <HomeHeader/>
+        <Sidebar/>
+           <Switch>
+             <Route path= '/admin/home/list' component={List} exact/>
+             <Route path='/admin/home/me' component={Me} />
+          </Switch>
+      </Fragment>
     )
   }
 }
-export default Login
+export default Home

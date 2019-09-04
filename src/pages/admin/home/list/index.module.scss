@@ -1,0 +1,38 @@
+.article-list {
+    width: 40%;
+    height: 100%;
+    overflow: auto;
+    padding: 0 0.8em 0.5em 0;
+    .list {
+        // margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+:global(.editor) {
+    width: 58%;
+    height: 100%;
+    padding: 0 0.8em 0.5em 0;
+    overflow: auto;
+}
+
+.main {
+    margin-left: 48px;
+    background: $background;
+    padding: .5em 6em;
+    height: calc(100% - 48px);
+    p {
+        span {
+            color: $special;
+        }
+    }
+}
+.panel {
+    @include flex($justify: space-between);
+    height: calc(100% - 48px);
+    padding: 0.5em 0;
+}
+
+
+

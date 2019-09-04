@@ -1,0 +1,47 @@
+.side-nav {
+    float: left;
+    @include flex($flow: column wrap);
+    font-size: 1rem;
+    height: calc(100% - 3em);
+    width: 3em;
+    background: $word;
+}
+
+
+.link {
+    text-decoration:none;
+    @include flex($flow: column wrap);
+    margin-bottom: 3em;
+    width: 100%;
+    .icon {
+        fill: $special;
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .descript {
+        color: $special;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    &:hover {
+        border-left: 2px solid $base;
+    }
+
+    &:hover > .icon {
+        fill: $base;
+    }
+    &:hover > .descript {
+        color: $base;
+    }
+}
+.selected {
+    border-left: 2px solid $base;
+    .icon {
+        fill: $base;
+    }
+    .descript {
+        color: $base;
+    }
+}
+

@@ -1,20 +1,48 @@
-$white: #fefdff;
-$black: #000;
-
-// 系统配色
-$title: #2c3e50;
-$word: #34495e;
-$base: #f18f01;
-$quote: #99c24d;
-$special: #c1bfb5;
-$background: #ebeff5;
-
-@mixin flex($flow: row wrap, $justify: center, $align: center) {
-    display: flex;
-    flex-flow: $flow;
-    justify-content: $justify;
-    align-items: $align;
-}
-.fuck{
-  border:1px solid red;
+.login-container {
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    @include flex($flow: column wrap);
+    .form {
+        @include flex($flow: column wrap);
+        width: 400px;
+        height: 330px;
+        border-top: 20px solid $base;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+        .slogan {
+            font-size: 1.6rem;
+            margin-bottom: 1em;
+            span {
+                color: $base;
+            }
+        }
+        input {
+            font: {
+                size: 1rem;
+            }
+            margin-bottom: 2em;
+            width: 20em;
+            height: 2.5em;
+            outline-color: $base;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+        button {
+            color: $white;
+            font: {
+                size: 1.6rem;
+            };
+            border-radius:30px;
+            width: 6em;
+            height: 2em;
+            border: none;
+            background: $base;
+            outline: none;
+            cursor: pointer;
+        }
+    }
 }

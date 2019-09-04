@@ -1,0 +1,24 @@
+.head-nav {
+    @include flex($justify: flex-start);
+    height: 3em;
+      .content-container {
+        @include flex($justify: space-between);
+        padding: 0.5em;
+        height: 100%;
+        width: 100%;
+        border-bottom: 2px solid $base;
+        .log-out {
+            @include flex;
+            color: $word;
+        }
+    }
+
+    h4 {
+        @include flex;
+        margin: 0;
+    }
+      .log-out {
+        cursor: pointer;
+    }
+}
+
