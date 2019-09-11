@@ -26,7 +26,7 @@ class Login extends Component {
   }
   handleLogin() {
     axios.post(
-        '/api/v1/tokens', {
+        '/tokens', {
           username: this.state.username,
           password: md5(this.state.password)
         })

@@ -7,7 +7,8 @@ import HomeHeader from '@/components/HomeHeader'
 import Sidebar from '@/components/Sidebar'
 import {
   Switch,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 import List from './list'
 import Me from './me'
@@ -27,6 +28,7 @@ class Home extends Component {
            <Switch>
              <Route path= '/admin/home/list' component={List} exact/>
              <Route path='/admin/home/me' component={Me} />
+             <Redirect to='/admin/home/list'/>
           </Switch>
       </Fragment>
     )

@@ -1,0 +1,12 @@
+.main {
+    height: calc(100% - 48px);
+    padding: 0.5em 6em;
+    background: #ebeff5;
+    overflow: auto;
+    font-size: 1rem;
+}
+
+.btn-container {
+    @include flex($justify: flex-end);
+}
+

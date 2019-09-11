@@ -2,11 +2,18 @@ import React, {
   Component
 } from 'react'
 import styles from './index.module.scss'
-
+import {
+  createBrowserHistory
+} from 'history';
 
 class HomeHeader extends Component {
   constructor(props) {
     super(props)
+  }
+  logout() {
+    localStorage.removeItem('token');
+    const history = createBrowserHistory();
+    history.push('/admin/login')
   }
   render() {
     return (
@@ -21,7 +28,7 @@ class HomeHeader extends Component {
                  <svg className="icon" aria-hidden="true">
                    <use xlinkHref="#icon-logout"></use>
                  </svg>
-              <span>&nbsp;登出</span>
+              <span onClick={this.logout}>&nbsp;登出</span>
             </a>
         </div>
     </nav>

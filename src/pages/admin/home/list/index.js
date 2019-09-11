@@ -4,7 +4,14 @@ import React, {
 import styles from './index.module.scss'
 import Editor from '@/components/Editor'
 import EditList from '@/components/EditList'
+import {
+  connect
+} from 'react-redux'
+import {
+  addArticle
+ } from './store/actionCreators.js'
 
+@connect(null,{addArticle})
 class List extends Component {
   constructor(props) {
     super(props)
@@ -19,7 +26,7 @@ class List extends Component {
           <main className={styles["panel"]}>
             <div className={styles["article-list"]}>
               <section className="btn-container">
-                   <button id="add" className="not-del">新文章</button>
+                   <button id="add" className="not-del" onClick={this.props.addArticle}>新文章</button>
               </section>
              <EditList/>
             </div>

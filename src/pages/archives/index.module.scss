@@ -1,0 +1,24 @@
+.archive-container {
+  h2{
+    margin: 1em 0;
+    font-size:21px;
+  }
+    ul {
+        font-size:14px;
+        padding-left: 3em;
+        list-style-type: circle;
+        li {
+            margin: 0.8em 0;
+        }
+    }
+
+    .date {
+        color: $special;
+    }
+
+    a {
+        color: $base;
+        text-decoration:none;
+    }
+}
+

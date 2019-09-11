@@ -48,7 +48,7 @@
         margin: 1em 0;
         padding: 0;
         .tag {
-            margin: 0 1em 1em 0;
+            margin: 0 0.2em 0.2em 0;
             padding: 0.3em;
             color: $base;
             border-radius: 2px;
@@ -62,21 +62,37 @@
         }
 
         .tag-edit {
+            sup {
+                display: inline-block;
+                visibility: hidden;
+                cursor: pointer;
+                color: $white;
+                line-height: 10px;
+                text-align: center;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $special;
+            }
+            &:hover > sup {
+                visibility: visible;
+            }
             margin-right: 3px;
         }
-        .tag-input{
-            margin-bottom: 5px;
-            width: 80px;
-            background: none;
-            border: none;
-            border-bottom: 1px solid #c1bfb5;
-            outline: none;
-            color: #34495e;
-        }
-    }
+     }
     .list {
         margin: 0;
         list-style: none;
         padding: 0;
     }
 }
+.tag-input {
+    margin-bottom: 5px;
+    width: 50px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $special;
+    outline: none;
+    color: $word;
+}
+

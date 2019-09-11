@@ -36,6 +36,9 @@
             list-style: none;
             margin-right: 10px;
             padding: 0;
+            sup{
+              cursor:pointer;
+            }
             .tag {
                 margin-right: 10px;
                 color: $base;
@@ -56,11 +59,6 @@
         }
     }
 }
-.tips {
-    color: $quote;
-    text-align: center;
-}
-.content {
-    font-size: 1.3rem;
-}
+
+
 

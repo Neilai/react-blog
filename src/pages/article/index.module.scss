@@ -1,0 +1,39 @@
+:global(.rendered-article){
+  h1 {
+    font-size:1.8em;
+    padding-bottom: .6em;
+    border-bottom: 1px solid $special;
+  }
+  h1 {
+    font-size:1.5m;
+    padding-bottom: .6em;
+    border-bottom: 1px solid $special;
+  }
+
+  .time:before {
+    content: "";
+  }
+  .tag {
+    color: #99c24d;
+    margin-right:1em;
+  }
+  img {
+    max-width: 100%;
+  }
+  a {
+    color: $base;
+    text-decoration: none;
+  }
+  blockquote {
+    border-left: 3px solid $base;
+    margin: 2em 0;
+    padding-left: 1em;
+    font-weight: 600;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 1em 0;
+  }
+}
