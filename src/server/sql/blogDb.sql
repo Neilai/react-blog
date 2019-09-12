@@ -56,7 +56,7 @@ LOCK TABLES `USER` WRITE;
 
 INSERT INTO `USER` (`id`, `user`, `password`)
 VALUES
-	(1,'Neil','aa45f19ddc13bb122728e1a8983c2b7e');
+	(1,'Neil','25d55ad283aa400af464c76d713c07ad');
 
 UNLOCK TABLES;
 
