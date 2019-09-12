@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import styles from './index.module.scss';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import axios from 'axios';
 import moment from 'moment';
 import parseMarkdown from '@/util/parseMarkdown.js'
@@ -39,6 +40,7 @@ class Me extends Component {
         </div>
     </article>
           </div>
+            <Footer></Footer>
       </Fragment>
     )
   }

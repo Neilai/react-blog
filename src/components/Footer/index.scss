@@ -1,0 +1,18 @@
+ #app-footer{
+        font-size:13px;
+        font-weight: 200;
+        width: 95%;
+        max-width: 850px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 2em 0;
+        color: $special;
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+        .github {
+            color: $base;
+        }
+        a{
+          text-decoration:none;
+        }
+    }
+

@@ -20,9 +20,9 @@ class HomeHeader extends Component {
       <nav className={styles["head-nav"]}>
         <div className={styles["content-container"]}>
             <section>
-                <h4 className="title">
+                <h2 className="title">
                     我的博客后台
-                </h4>
+                </h2>
             </section>
             <a className={styles["log-out"]}>
                  <svg className="icon" aria-hidden="true">

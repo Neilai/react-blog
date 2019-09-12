@@ -12,9 +12,8 @@ export default function initAxios() {
   }, (err) => {
     if (err.response.status == '401') {
       localStorage.removeItem('token');
-      setTimeout(() => {
-        history.push('/admin/login')
-      }, 0)
+      history.push('/admin/login')
+      window.location.reload()
     }
     return Promise.reject(err)
   })

@@ -56,11 +56,11 @@ class Editor extends Component {
     tags,
     content
   }) {
-    var tags = tags.join(',')
+    var tagsStr = tags.join(',')
     axios.put(
         `/articles/update/${this.props.activeId}`, {
           title,
-          tags,
+          tags:tagsStr,
           content,
         }, {
           headers: {
@@ -80,11 +80,11 @@ class Editor extends Component {
     tags,
     content
   }) {
-    var tags = tags.join(',')
+    var tagsStr = tags.join(',')
     axios.put(
         `/articles/publish/${this.props.activeId}`, {
           title,
-          tags,
+          tags:tagsStr,
           content,
           isPublished: 1
         }, {

@@ -1,8 +1,29 @@
+:global(.menu-enter) {
+  transform: translateX(100%);
+}
+
+:global(.menu-enter-active) {
+  transform: translateX(0);
+  transition: transform 300ms ease;
+}
+
+:global(.menu-exit) {
+  transform: translateX(0);
+}
+
+:global(.menu-exit-active) {
+  transform: translateX(100%);
+  transition: transform  300ms  ease;
+}
+
 .nav-container {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 
 .site-nav {
+  p{
+    font-family:Dosis, Source Sans Pro;
+  }
   position: relative;
   margin: 0 auto;
   @include flex($justify: space-between);
@@ -35,22 +56,7 @@
       }
     }
   }
-  .nav-title {
-    @include flex;
-    .logo {
-      width: 2.5em;
-      height: 2.5em;
-      margin-right: 0.5em;
-    }
-    .title {
-      font: {
-        //size: 2rem;
-        family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
-      }
-      letter-spacing: 0.1em;
-    }
-  }
-  .nav-menu {
+   .nav-menu {
     position: absolute;
     right: 0.5em;
     top: 50%;
@@ -65,7 +71,7 @@
 }
 
 .mask-nav {
-  //visibility:hidden;
+  //visibility: hidden;
   z-index: 1;
   position: fixed;
   right: 0;
@@ -115,5 +121,8 @@
     .nav-menu {
       visibility: visible;
     }
+  }
+  .mask-nav {
+    visibility: visible;
   }
 }

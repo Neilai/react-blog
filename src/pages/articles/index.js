@@ -6,7 +6,12 @@ import {
   Link
 } from 'react-router-dom';
 import styles from './index.module.scss';
+import {
+  is,
+  fromJS
+} from 'immutable';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import axios from 'axios';
 import moment from 'moment';
 import parseMarkdown from '@/util/parseMarkdown.js'
@@ -57,8 +62,13 @@ class Articles extends Component {
       })
       .catch(err => alert(err))
   }
-  componentWillUpdate(nextProps, nextState) {
-    this.getArticleList()
+
+  componentDidUpdate(nextProps, nextState) {
+    if (this.props.location.search !== nextProps.location.search)
+      this.getArticleList()
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state), fromJS(nextState))
   }
   componentDidMount() {
     this.getArticleList()
@@ -105,11 +115,11 @@ class Articles extends Component {
                       <a>下一页</a>
                         </span>
                   )
-
                }
             </div>
           </div>
       </div>
+        <Footer></Footer>
     </Fragment>
     )
   }

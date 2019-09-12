@@ -8,6 +8,7 @@ import {
   Link
 } from 'react-router-dom';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import moment from 'moment';
 class Archives extends Component {
   constructor(props){
@@ -69,6 +70,7 @@ class Archives extends Component {
              </div>
         </div>     
       </div>
+        <Footer></Footer>
       </Fragment>
     )
   }

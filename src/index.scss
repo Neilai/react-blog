@@ -1,75 +1,81 @@
 $white: #fefdff;
 $black: #000;
-
 $title: #2c3e50;
 $word: #34495e;
 $base: #f18f01;
 $quote: #99c24d;
 $special: #c1bfb5;
 $background: #ebeff5;
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.App{
-  height:100%;
+
+.App {
+  height: 100%;
 }
-#root{
-  height:100%;
+
+#root {
+  height: 100%;
 }
-body,html{
-  height:100%;
+
+body,
+html {
+  height: 100%;
 }
+
 h3:before,
 h4:before {
-    content: "# ";
-    color: $base;
+  content: "# ";
+  color: $base;
 }
+
 h1,
 h2,
 h3,
 h4 {
-    color: $title;
+  color: $title;
 }
+
 .time {
-    color: #c1bfb5;
-    font-size: 14px;
-    margin: 1em 0;
-    font-weight: bold;
-  }
+  color: #c1bfb5;
+  font-size: 14px;
+  margin: 1em 0;
+  font-weight: bold;
+}
 
 .btn-container {
-    button {
-        border-radius: 2px;
-        outline: none;
-        cursor: pointer;
-        margin-right: 10px;
+  button {
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  button:last-of-type {
+    margin-right: 0;
+  }
+  .delete {
+    padding: 0 0.2em;
+    margin-right: 10px;
+    color: $word;
+    border: 1px solid $word;
+    &:hover {
+      color: $base;
+      border: 1px solid $base;
     }
-    button:last-of-type {
-        margin-right: 0;
+  }
+  .not-del {
+    padding: 0 0.2em;
+    color: $white;
+    background: $base;
+    border: 1px solid $base;
+    &:hover {
+      background: $white;
+      color: $base;
+      border: 1px solid $base;
     }
-    .delete {
-        padding: 0 0.2em;
-        margin-right: 10px;
-        color: $word;
-        border: 1px solid $word;
-        &:hover {
-            color: $base;
-            border: 1px solid $base;
-        }
-    }
-    .not-del {
-        padding: 0 0.2em;
-        color: $white;
-        background: $base;
-        border: 1px solid $base;
-        &:hover {
-            background: $white;
-            color: $base;
-            border: 1px solid $base;
-        }
-    }
+  }
 }
 
 .main-container {
@@ -79,55 +85,55 @@ h4 {
   max-width: 850px;
 }
 
-
 @mixin chosen-item {
-    border-bottom: 3px solid $base;
+  border-bottom: 3px solid $base;
 }
 
 @mixin flex($flow: row wrap, $justify: center, $align: center) {
-    display: flex;
-    flex-flow: $flow;
-    justify-content: $justify;
-    align-items: $align;
+  display: flex;
+  flex-flow: $flow;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin fix($left: 0px, $top: 0px) {
-    position: fixed;
-    left: $left;
-    top: $top;
+  position: fixed;
+  left: $left;
+  top: $top;
 }
 
 @mixin clear-fix($element) {
-    #{$element}:before,
-    #{$element}:after {
-        content: "";
-        display: table;
-    }
-    #{$element}:after {
-        clear: both;
-    }
-    #{$element} {
-        *zoom: 1;
-    }
+  #{$element}:before,
+  #{$element}:after {
+    content: "";
+    display: table;
+  }
+  #{$element}:after {
+    clear: both;
+  }
+  #{$element} {
+    *zoom: 1;
+  }
 }
+
 pre {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #383a42;
-    background: #f8f8f8;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #383a42;
+  background: #f8f8f8;
 }
 
 .hljs-comment,
 .hljs-quote {
-    color: #a0a1a7;
-    font-style: italic;
+  color: #a0a1a7;
+  font-style: italic;
 }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-    color: #a626a4;
+  color: #a626a4;
 }
 
 .hljs-section,
@@ -135,11 +141,11 @@ pre {
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-    color: #e45649;
+  color: #e45649;
 }
 
 .hljs-literal {
-    color: #0184bb;
+  color: #0184bb;
 }
 
 .hljs-string,
@@ -147,12 +153,12 @@ pre {
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-    color: #50a14f;
+  color: #50a14f;
 }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-    color: #c18401;
+  color: #c18401;
 }
 
 .hljs-attr,
@@ -163,7 +169,7 @@ pre {
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-    color: #986801;
+  color: #986801;
 }
 
 .hljs-symbol,
@@ -172,17 +178,19 @@ pre {
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-    color: #4078f2;
+  color: #4078f2;
 }
 
 .hljs-emphasis {
-    font-style: italic;
+  font-style: italic;
 }
 
 .hljs-strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .hljs-link {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+

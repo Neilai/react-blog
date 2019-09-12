@@ -8,6 +8,7 @@ import {
   Link
 } from 'react-router-dom';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import moment from 'moment';
 class Tags extends Component {
   constructor(props) {
@@ -56,8 +57,8 @@ class Tags extends Component {
             <nav>
               <ul className={styles["tags"]}>
                   {
-                    this.state.tags.map(v=>(
-                      <li key={v} onClick={()=>this.goAnchor(v)}><a hreaf='javascript:void(0)'>{v}</a></li>
+                    this.state.tags.map((v,i)=>(
+                      <li key={i} onClick={()=>this.goAnchor(v)}><a hreaf='javascript:void(0)'>{v}</a></li>
                     ))
                   }
               </ul>
@@ -84,6 +85,7 @@ class Tags extends Component {
             </nav>
           </div>
         </div>
+          <Footer></Footer>
       </Fragment>
     )
   }
